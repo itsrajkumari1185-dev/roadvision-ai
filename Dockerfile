@@ -1,4 +1,4 @@
-FROM python:3.13-slim
+FROM python:3.12-slim
 # ultralytics pulls in opencv-python (GUI build) which needs libGL at import time
 RUN apt-get update && apt-get install -y --no-install-recommends libgl1 libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
